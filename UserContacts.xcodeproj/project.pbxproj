@@ -17,7 +17,6 @@
 		257A5745230E8C6B0006D3BD /* UserContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 257A5743230E8C6B0006D3BD /* UserContacts.xcdatamodeld */; };
 		257A5747230E9DA30006D3BD /* DeleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A5746230E9DA30006D3BD /* DeleteController.swift */; };
 		257A5749230EA0B10006D3BD /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A5748230EA0B10006D3BD /* DisplayViewController.swift */; };
-		257A574B230EDF940006D3BD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A574A230EDF940006D3BD /* Model.swift */; };
 		257A574D230EF59A0006D3BD /* EditDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257A574C230EF59A0006D3BD /* EditDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		257A5744230E8C6B0006D3BD /* UserContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserContacts.xcdatamodel; sourceTree = "<group>"; };
 		257A5746230E9DA30006D3BD /* DeleteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteController.swift; sourceTree = "<group>"; };
 		257A5748230EA0B10006D3BD /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
-		257A574A230EDF940006D3BD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		257A574C230EF59A0006D3BD /* EditDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +69,6 @@
 				257A572D230E8BCE0006D3BD /* AppDelegate.swift */,
 				257A572F230E8BCE0006D3BD /* AddViewController.swift */,
 				257A5741230E8C560006D3BD /* DataParser.swift */,
-				257A574A230EDF940006D3BD /* Model.swift */,
 				257A5748230EA0B10006D3BD /* DisplayViewController.swift */,
 				257A5746230E9DA30006D3BD /* DeleteController.swift */,
 				257A5731230E8BCE0006D3BD /* EditViewController.swift */,
@@ -164,7 +161,6 @@
 				257A5742230E8C560006D3BD /* DataParser.swift in Sources */,
 				257A5730230E8BCE0006D3BD /* AddViewController.swift in Sources */,
 				257A5745230E8C6B0006D3BD /* UserContacts.xcdatamodeld in Sources */,
-				257A574B230EDF940006D3BD /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
