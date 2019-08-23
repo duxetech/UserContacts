@@ -10,12 +10,12 @@ import UIKit
 
 class EditViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parser.contacts.count
+        return parser.contacts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "editCell", for: indexPath)
-        cell.textLabel?.text = parser.contacts[indexPath.row].username
+        cell.textLabel?.text = parser.contacts![indexPath.row].username
         cell.textLabel?.textAlignment = .center
         return cell
     }

@@ -8,16 +8,16 @@
 
 import UIKit
 
-class DeleteController: UIViewController, UITableViewDataSource {
+class DeleteController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parser.contacts.count
+        return parser.contacts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "deleteCell", for: indexPath)
-        cell.textLabel?.text = parser.contacts[indexPath.row].username
+        cell.textLabel?.text = parser.contacts![indexPath.row].username
         cell.textLabel?.textAlignment = .center
         return cell    }
    
@@ -27,6 +27,10 @@ class DeleteController: UIViewController, UITableViewDataSource {
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showAlert(row: indexPath.row)
+    }
+    
     func showAlert(row : Int){
         let alert = UIAlertController(title: "Alert!", message: "Delete the data", preferredStyle: UIAlertController.Style.alert)
         
@@ -36,9 +40,7 @@ class DeleteController: UIViewController, UITableViewDataSource {
             self.DeleteTV.reloadData()
 
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(_) in
-            print("cancel")
-        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         
         present(alert,animated: true,completion: nil)
@@ -48,6 +50,7 @@ class DeleteController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         DeleteTV.dataSource = self
+        DeleteTV.delegate = self
         // Do any additional setup after loading the view.
     }
     

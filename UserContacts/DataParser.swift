@@ -10,9 +10,10 @@ import UIKit
 import CoreData
 
 class Parser {
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var contacts = [Contacts]()
+    var contacts : [Contacts]? = [Contacts]()
     
     func insertData(user : String, pass : String, dob : String, address : String,  pin : Int) {
         let entity = Contacts(context: context)
